@@ -83,11 +83,11 @@ a {
     font-size: 15px;
 }
 
-.landing header nav a {
+.landing header a {
     position: relative;
 }
 
-.landing header nav a::after {
+.landing header a::after {
     content: "";
     position: absolute;
     background-color: white;
@@ -99,7 +99,7 @@ a {
     transition: var(--main-trans);
 }
 
-.landing header nav a:hover::after {
+.landing header a:hover::after {
     width: 50%;
 }
 
@@ -110,6 +110,43 @@ a {
     border: 2px solid white;
     padding: 40px;
     margin: 150px 0;
+}
+
+.about .container {
+    padding-top: 150px;
+    /* padding-bottom: 150px; */
+    position: relative;
+}
+
+.about .container .info {
+    position: absolute;
+    width: 560px;
+    font-size: 15px;
+    padding: 60px;
+    padding-right: 0;
+    padding-left: 100px;
+    padding-bottom: 0;
+    background-color: white;
+    bottom: 0;
+    right: 20px;
+}
+
+.about .container .info h1 {
+    font-size: 3rem;
+}
+
+.about .container .info p {
+    color: var(--dark-gray);
+    line-height: 1.6;
+}
+
+.about .container .about-img img {
+    max-width: 100%;
+}
+
+.careers {
+    padding-top: 150px;
+    padding-bottom: 150px;
 }
 /* End Local Rules */
 
@@ -130,6 +167,27 @@ a {
         margin-right: auto;
         font-size: 2.6rem;
         padding: 30px;
+    }
+
+    .about .container {
+        padding-top: 60px;
+    }
+
+    .about .container .info {
+        position: initial;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        width: fit-content;
+        padding: 20px;
+    }
+
+    .about .container .info p {
+        color: var(--very-dark-gray);
+    }
+
+    .about .container .info h1 {
+        font-size: 2.3rem;
     }
 }
 
