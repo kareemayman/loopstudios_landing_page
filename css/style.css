@@ -166,7 +166,7 @@ a {
 }
 
 .careers {
-    padding-top: 150px;
+    padding-top: 60px;
     padding-bottom: 150px;
 }
 
@@ -182,7 +182,7 @@ a {
     width: fit-content;
 }
 
-.careers .container .flex a {
+.careers a {
     padding: 10px 50px;
     text-align: center;
     color: black;
@@ -318,6 +318,33 @@ a {
 
     .about .container .info h1 {
         font-size: 2.3rem;
+    }
+
+    .careers {
+        padding-top: 30px;
+        padding-bottom: 80px;
+    }
+
+    .careers .container {
+        text-align: center;
+    }
+
+    .careers .container .flex {
+        justify-content: center;
+    }
+
+    .careers .container h1 {
+        font-size: 2.3rem;
+    }
+
+    .careers .container .gallery {
+        margin-bottom: 30px;
+    }
+
+    .careers .container .gallery div::before {
+        bottom: 10px;
+        left: 20px;
+        font-size: 1.8rem;
     }
 }
 
