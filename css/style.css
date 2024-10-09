@@ -73,7 +73,7 @@ a {
 
 /* Start Local Rules */
 .landing {
-    background-image: url(/images/desktop/image-hero.jpg);
+    background-image: url(../images/desktop/image-hero.jpg);
     background-size: cover;
     padding-top: var(--section-padding);
     padding-bottom: var(--section-padding);
