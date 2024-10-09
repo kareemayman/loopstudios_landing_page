@@ -169,6 +169,115 @@ a {
     padding-top: 150px;
     padding-bottom: 150px;
 }
+
+.careers .container .flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 30px;
+}
+
+.careers .container h1 {
+    font-size: 3rem;
+    width: fit-content;
+}
+
+.careers .container .flex a {
+    padding: 10px 50px;
+    text-align: center;
+    color: black;
+    font-size: 16px;
+    border: 2px solid var(--very-dark-gray);
+    letter-spacing: 3px;
+    transition: var(--main-trans);
+}
+
+.careers .container .flex a:hover {
+    color: white;
+    background-color: black;
+    border-color: black;
+}
+
+.careers .container .gallery {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.careers .container .gallery div img {
+    width: 100%;
+    height: 100%;
+}
+
+.careers .container .gallery div {
+    position: relative;
+    transition: var(--main-trans);
+    cursor: pointer;
+}
+
+.careers .container .gallery div::before {
+    position: absolute;
+    color: white;
+    left: 30px;
+    bottom: 30px;
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 300;
+    font-size: 2.2rem;
+    z-index: 5;
+    white-space: pre-wrap; /* Or use pre */
+}
+
+.careers .container .gallery div::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    transition: var(--main-trans);
+}
+
+.careers .container .gallery div:hover::after {
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.careers .container .gallery div:hover::before {
+    color: black;
+}
+
+.careers .container .gallery .deep-earth::before {
+    content: "DEEP\A EARTH";
+}
+
+.careers .container .gallery .night-arcade::before {
+    content: "NIGHT \A ARCADE";
+}
+
+.careers .container .gallery .soccer::before {
+    content: "SOCCER \A TEAM VR";
+}
+
+.careers .container .gallery .the-grid::before {
+    content: "THE \AGRID";
+}
+
+.careers .container .gallery .from-up::before {
+    content: "FROM UP \A ABOVE VR";
+}
+
+.careers .container .gallery .pocket::before {
+    content: "POCKET \A BOREALIS";
+}
+
+.careers .container .gallery .curiosity::before {
+    content: "THE \A CURIOSITY";
+}
+
+.careers .container .gallery .fisheye::before {
+    content: "MAKE IT \A FISHEYE";
+}
+
 /* End Local Rules */
 
 /* Start Media Queries */
