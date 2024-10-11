@@ -10,8 +10,8 @@
 
 /* Start Global Rules */
 ::selection {
-  color: white;
-  background-color: var(--very-dark-gray);
+  color: black;
+  background-color: rgb(231, 231, 231);
 }
 
 ::-webkit-scrollbar {
