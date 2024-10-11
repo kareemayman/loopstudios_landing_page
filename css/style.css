@@ -1,114 +1,346 @@
 /* Start Variables */
 :root {
-    --dark-gray: hsl(0, 0%, 55%);
-    --very-dark-gray: hsl(0, 0%, 41%);
-    --main-trans: 0.3s;
-    --body-font: 15px;
-    --section-padding: 60px;
+  --dark-gray: hsl(0, 0%, 55%);
+  --very-dark-gray: hsl(0, 0%, 41%);
+  --main-trans: 0.3s;
+  --body-font: 15px;
+  --section-padding: 60px;
 }
 /* End Variables */
 
 /* Start Global Rules */
 ::selection {
-    color: white;
-    background-color: var(--very-dark-gray);
+  color: white;
+  background-color: var(--very-dark-gray);
 }
 
 ::-webkit-scrollbar {
-    width: 12px; /* Width of the scrollbar */
+  width: 12px; /* Width of the scrollbar */
 }
 
 ::-webkit-scrollbar-track {
-    background: #f1f1f1; /* Background color of the track */
+  background: #f1f1f1; /* Background color of the track */
 }
 
 ::-webkit-scrollbar-thumb {
-    background: var(--dark-gray); /* Color of the draggable part of the scrollbar */
+  background: var(
+    --dark-gray
+  ); /* Color of the draggable part of the scrollbar */
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #555; /* Color when hovering over the thumb */
+  background: #555; /* Color when hovering over the thumb */
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 .alata {
-    font-family: "Alata", sans-serif;
-    font-weight: 400;
-    font-style: normal;
+  font-family: "Alata", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .josefin {
-    font-family: "Josefin Sans", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 300;
-    font-style: normal;
+  font-family: "Josefin Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
 }
 
 a {
-    text-decoration: none;
-    display: inline-block;
-    color: white;
+  text-decoration: none;
+  display: inline-block;
+  color: white;
 }
 
 .container {
-    padding-left: 15px;
-    padding-right: 15px;
-    margin-left: auto;
-    margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
 }
-
 
 /* End Global Rules */
 
 /* Start Local Rules */
 .landing {
-    background-image: url(../images/desktop/image-hero.jpg);
-    background-size: cover;
-    padding-top: var(--section-padding);
-    padding-bottom: var(--section-padding);
-    position: relative;
-    z-index: 2;
+  background-image: url(../images/desktop/image-hero.jpg);
+  background-size: cover;
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+  position: relative;
+  z-index: 2;
 }
 
 .landing::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: -1;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: -1;
 }
 
 .landing header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .landing header nav {
-    display: flex;
-    gap: 30px;
-    font-size: 15px;
+  display: flex;
+  gap: 30px;
+  font-size: 15px;
 }
 
 .landing header a {
-    position: relative;
+  position: relative;
 }
 
 .landing header a::after {
+  content: "";
+  position: absolute;
+  background-color: white;
+  width: 0;
+  height: 2px;
+  bottom: -10px;
+  left: 50%;
+  translate: -50%;
+  transition: var(--main-trans);
+}
+
+.landing header a:hover::after {
+  width: 50%;
+}
+
+.landing .hero h1 {
+  color: white;
+  font-size: 4.5rem;
+  width: 62%;
+  border: 2px solid white;
+  padding: 40px;
+  margin: 150px 0;
+}
+
+.about .container {
+  padding-top: 150px;
+  /* padding-bottom: 150px; */
+  position: relative;
+}
+
+.about .container .info {
+  position: absolute;
+  width: 560px;
+  font-size: 15px;
+  padding: 60px;
+  padding-right: 0;
+  padding-left: 100px;
+  padding-bottom: 0;
+  background-color: white;
+  bottom: 0;
+  right: 20px;
+}
+
+.about .container .info h1 {
+  font-size: 3rem;
+}
+
+.about .container .info p {
+  color: var(--dark-gray);
+  line-height: 1.6;
+}
+
+.about .container .about-img img {
+  max-width: 100%;
+}
+
+.careers {
+  padding-top: 60px;
+  padding-bottom: 150px;
+}
+
+.careers .container .flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 30px;
+}
+
+.careers .container h1 {
+  font-size: 3rem;
+  width: fit-content;
+}
+
+.careers a {
+  padding: 10px 50px;
+  text-align: center;
+  color: black;
+  font-size: 16px;
+  border: 2px solid var(--very-dark-gray);
+  letter-spacing: 3px;
+  transition: var(--main-trans);
+}
+
+.careers .container .flex a:hover {
+  color: white;
+  background-color: black;
+  border-color: black;
+}
+
+.careers .container .gallery {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.careers .container .gallery div img {
+  width: 100%;
+  height: 100%;
+}
+
+.careers .container .gallery div {
+  position: relative;
+  transition: var(--main-trans);
+  cursor: pointer;
+}
+
+.careers .container .gallery div::before {
+  position: absolute;
+  color: white;
+  left: 30px;
+  bottom: 30px;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+  font-size: 2.2rem;
+  z-index: 5;
+  white-space: pre-wrap; /* Or use pre */
+}
+
+.careers .container .gallery div::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  transition: var(--main-trans);
+}
+
+.careers .container .gallery div:hover::after {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.careers .container .gallery div:hover::before {
+  color: black;
+}
+
+.careers .container .gallery .deep-earth::before {
+  content: "DEEP\A EARTH";
+}
+
+.careers .container .gallery .night-arcade::before {
+  content: "NIGHT \A ARCADE";
+}
+
+.careers .container .gallery .soccer::before {
+  content: "SOCCER \A TEAM VR";
+}
+
+.careers .container .gallery .the-grid::before {
+  content: "THE \AGRID";
+}
+
+.careers .container .gallery .from-up::before {
+  content: "FROM UP \A ABOVE VR";
+}
+
+.careers .container .gallery .pocket::before {
+  content: "POCKET \A BOREALIS";
+}
+
+.careers .container .gallery .curiosity::before {
+  content: "THE \A CURIOSITY";
+}
+
+.careers .container .gallery .fisheye::before {
+  content: "MAKE IT \A FISHEYE";
+}
+
+footer {
+  background-color: black;
+}
+
+footer .container {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+footer div img {
+    max-width: 100%;
+}
+
+footer .left .logo {
+    margin-bottom: 30px;
+}
+
+footer nav {
+    display: flex;
+    gap: 30px;
+}
+
+footer nav a {
+    font-size: 15px;
+    transition: var(--main-trans);
+    position: relative;
+}
+
+footer nav a::after {
+    content: "";
+    position: absolute;
+    background-color: white;
+    width: 0;
+    height: 2px;
+    bottom: -10px;
+    left: 50%;
+    translate: -50%;
+    transition: var(--main-trans);
+}
+  
+footer nav a:hover::after {
+    width: 50%;
+}
+
+footer .right .social-media {
+    display: flex;
+    gap: 15px;
+    justify-content: flex-end;
+    margin-bottom: 30px;
+}
+
+footer .right .social-media div {
+    transition: var(--main-trans);
+    position: relative;
+    cursor: pointer;
+}
+
+footer .right .social-media div::after {
     content: "";
     position: absolute;
     background-color: white;
@@ -120,260 +352,109 @@ a {
     transition: var(--main-trans);
 }
 
-.landing header a:hover::after {
-    width: 50%;
+footer .right .social-media div:hover::after {
+    width: 100%;
 }
 
-.landing .hero h1 {
-    color: white;
-    font-size: 4.5rem;
-    width: 62%;
-    border: 2px solid white;
-    padding: 40px;
-    margin: 150px 0;
-}
-
-.about .container {
-    padding-top: 150px;
-    /* padding-bottom: 150px; */
-    position: relative;
-}
-
-.about .container .info {
-    position: absolute;
-    width: 560px;
-    font-size: 15px;
-    padding: 60px;
-    padding-right: 0;
-    padding-left: 100px;
-    padding-bottom: 0;
-    background-color: white;
-    bottom: 0;
-    right: 20px;
-}
-
-.about .container .info h1 {
-    font-size: 3rem;
-}
-
-.about .container .info p {
+footer .right p {
     color: var(--dark-gray);
-    line-height: 1.6;
+    font-size: 15px;
 }
-
-.about .container .about-img img {
-    max-width: 100%;
-}
-
-.careers {
-    padding-top: 60px;
-    padding-bottom: 150px;
-}
-
-.careers .container .flex {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-bottom: 30px;
-}
-
-.careers .container h1 {
-    font-size: 3rem;
-    width: fit-content;
-}
-
-.careers a {
-    padding: 10px 50px;
-    text-align: center;
-    color: black;
-    font-size: 16px;
-    border: 2px solid var(--very-dark-gray);
-    letter-spacing: 3px;
-    transition: var(--main-trans);
-}
-
-.careers .container .flex a:hover {
-    color: white;
-    background-color: black;
-    border-color: black;
-}
-
-.careers .container .gallery {
-    display: grid;
-    gap: 30px;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-}
-
-.careers .container .gallery div img {
-    width: 100%;
-    height: 100%;
-}
-
-.careers .container .gallery div {
-    position: relative;
-    transition: var(--main-trans);
-    cursor: pointer;
-}
-
-.careers .container .gallery div::before {
-    position: absolute;
-    color: white;
-    left: 30px;
-    bottom: 30px;
-    font-family: "Josefin Sans", sans-serif;
-    font-weight: 300;
-    font-size: 2.2rem;
-    z-index: 5;
-    white-space: pre-wrap; /* Or use pre */
-}
-
-.careers .container .gallery div::after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    top: 0;
-    background-color: rgba(0, 0, 0, 0.4);
-    transition: var(--main-trans);
-}
-
-.careers .container .gallery div:hover::after {
-    background-color: rgba(255, 255, 255, 0.7);
-}
-
-.careers .container .gallery div:hover::before {
-    color: black;
-}
-
-.careers .container .gallery .deep-earth::before {
-    content: "DEEP\A EARTH";
-}
-
-.careers .container .gallery .night-arcade::before {
-    content: "NIGHT \A ARCADE";
-}
-
-.careers .container .gallery .soccer::before {
-    content: "SOCCER \A TEAM VR";
-}
-
-.careers .container .gallery .the-grid::before {
-    content: "THE \AGRID";
-}
-
-.careers .container .gallery .from-up::before {
-    content: "FROM UP \A ABOVE VR";
-}
-
-.careers .container .gallery .pocket::before {
-    content: "POCKET \A BOREALIS";
-}
-
-.careers .container .gallery .curiosity::before {
-    content: "THE \A CURIOSITY";
-}
-
-.careers .container .gallery .fisheye::before {
-    content: "MAKE IT \A FISHEYE";
-}
-
 /* End Local Rules */
 
 /* Start Media Queries */
 /* Custom */
 @media (width <= 992px) {
-    .desktop {
-        display: none !important;
-    }
+  .desktop {
+    display: none !important;
+  }
 
-    .landing {
-        background-image: url(../images/mobile/image-hero.jpg);
-    }
+  .landing {
+    background-image: url(../images/mobile/image-hero.jpg);
+  }
 
-    .landing .hero h1 {
-        width: fit-content;
-        margin-left: auto;
-        margin-right: auto;
-        font-size: 2.6rem;
-        padding: 30px;
-    }
+  .landing .hero h1 {
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 2.6rem;
+    padding: 30px;
+  }
 
-    .about .container {
-        padding-top: 60px;
-    }
+  .about .container {
+    padding-top: 60px;
+  }
 
-    .about .container .info {
-        position: initial;
-        margin-left: auto;
-        margin-right: auto;
-        text-align: center;
-        width: fit-content;
-        padding: 20px;
-    }
+  .about .container .info {
+    position: initial;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: fit-content;
+    padding: 20px;
+  }
 
-    .about .container .info p {
-        color: var(--very-dark-gray);
-    }
+  .about .container .info p {
+    color: var(--very-dark-gray);
+  }
 
-    .about .container .info h1 {
-        font-size: 2.3rem;
-    }
+  .about .container .info h1 {
+    font-size: 2.3rem;
+  }
 
-    .careers {
-        padding-top: 30px;
-        padding-bottom: 80px;
-    }
+  .careers {
+    padding-top: 30px;
+    padding-bottom: 80px;
+  }
 
-    .careers .container {
-        text-align: center;
-    }
+  .careers .container {
+    text-align: center;
+  }
 
-    .careers .container .flex {
-        justify-content: center;
-    }
+  .careers .container .flex {
+    justify-content: center;
+  }
 
-    .careers .container h1 {
-        font-size: 2.3rem;
-    }
+  .careers .container h1 {
+    font-size: 2.3rem;
+  }
 
-    .careers .container .gallery {
-        margin-bottom: 30px;
-    }
+  .careers .container .gallery {
+    margin-bottom: 30px;
+  }
 
-    .careers .container .gallery div::before {
-        bottom: 10px;
-        left: 20px;
-        font-size: 1.8rem;
-    }
+  .careers .container .gallery div::before {
+    bottom: 10px;
+    left: 20px;
+    font-size: 1.8rem;
+  }
 }
 
 @media (width < 375px) {
-    .landing .hero h1 {
-        font-size: 2.3rem;
-    }
+  .landing .hero h1 {
+    font-size: 2.3rem;
+  }
 }
 /* Container Queries */
 @media (min-width: 769px) {
-    .container {
-        width: 750px;
-    }
-
+  .container {
+    width: 750px;
+  }
 }
 
 @media (min-width: 992px) {
-    .container {
-        width: 970px;
-    }
-    
-    .mobile {
-        display: none !important;
-    }
+  .container {
+    width: 970px;
+  }
+
+  .mobile {
+    display: none !important;
+  }
 }
 
 @media (min-width: 1200px) {
-    .container {
-        width: 1170px;
-    }
+  .container {
+    width: 1170px;
+  }
 }
 /* End Media Queries */
