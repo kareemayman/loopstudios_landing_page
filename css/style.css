@@ -305,13 +305,13 @@ footer nav {
     gap: 30px;
 }
 
-footer nav a {
+footer a {
     font-size: 15px;
     transition: var(--main-trans);
     position: relative;
 }
 
-footer nav a::after {
+footer a::after {
     content: "";
     position: absolute;
     background-color: white;
@@ -323,7 +323,7 @@ footer nav a::after {
     transition: var(--main-trans);
 }
   
-footer nav a:hover::after {
+footer a:hover::after {
     width: 50%;
 }
 
@@ -428,6 +428,21 @@ footer .right p {
     left: 20px;
     font-size: 1.8rem;
   }
+
+  footer .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  footer nav {
+    flex-direction: column;
+  }
+
+  footer .right .social-media {
+    justify-content: center;
+    margin-top: 60px;
+  }
+
 }
 
 @media (width < 375px) {
