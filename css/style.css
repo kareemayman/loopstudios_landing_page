@@ -23,13 +23,11 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(
-    --dark-gray
-  ); /* Color of the draggable part of the scrollbar */
+  background: rgb(41, 41, 41);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #555; /* Color when hovering over the thumb */
+  background: rgb(24, 24, 24); /* Color when hovering over the thumb */
 }
 
 html {
